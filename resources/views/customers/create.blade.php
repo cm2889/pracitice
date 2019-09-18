@@ -4,18 +4,18 @@
 @section('title')
     Customer List
 
-    @endsection
+@endsection
 @section('content')
 
     <div class="row">
         <div class="col-12">
-            <h1> Customer </h1>
+            <h1> Add new  Customer </h1>
         </div>
     </div>
 
     <div class="row">
         <div class="col-12">
-            <form action="customer" method="POST" >
+            <form action="/customer" method="POST" >
 
                 <div class="form-group">
                     <label for="name"> Name </label>
@@ -64,11 +64,6 @@
         </div>
     </div>
 
-<hr>
-    <div class="row">
-        <div class="col-12">
 
-        </div>
-    </div>
 @endsection
 
