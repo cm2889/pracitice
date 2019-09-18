@@ -18,4 +18,5 @@ Route::view('about', 'about')->name('about');
 Route::get('customer','CustomersController@index');
 Route::get('customers/create','CustomersController@create');
 Route::post('customer','CustomersController@store');
+Route::get('customers/{customer}','CustomersController@show');
 

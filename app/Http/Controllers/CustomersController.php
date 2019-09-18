@@ -37,5 +37,13 @@ return view('customers.create',compact('companies'));
 
 
   }
+  public function show( Customer $customer){
+
+     
+      return view('customers.show',compact('customer'));
+
+  }
+
+
 
 }
