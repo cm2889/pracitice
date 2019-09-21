@@ -15,8 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::view('about', 'about')->name('about');
-Route::get('customer','CustomersController@index');
-Route::get('customers/create','CustomersController@create');
+/*Route::get('customer','CustomersController@index');
+Route::get('customer/create','CustomersController@create');
 Route::post('customer','CustomersController@store');
-Route::get('customers/{customer}','CustomersController@show');
+Route::get('customer/{customer}','CustomersController@show');
+Route::get('customer/{customer}/edit','CustomersController@edit');
+Route::patch('customer/{customer}','CustomersController@update');
+Route::delete('customer/{customer}','CustomersController@destroy');*/
+
+
+Route::resource('customer','CustomersController');
 

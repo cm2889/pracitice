@@ -1,26 +1,27 @@
-
 @extends('layout')
 
-@section('title')
-    Customer List
+@section('title', 'Add New Customer')
 
-@endsection
 @section('content')
-
     <div class="row">
         <div class="col-12">
-            <h1> Add new  Customer </h1>
+            <h1>Add New Customer</h1>
         </div>
     </div>
 
     <div class="row">
         <div class="col-12">
+
+
             <form action="/customer" method="POST" >
+
+
+
 
                 <div class="form-group">
                     <label for="name"> Name </label>
 
-                    <input type="text" name="name" value="{{old('name')}}" class="form-control">
+                    <input type="text" name="name" value="{{old('name') ?? $customer->name }}" class="form-control">
                     <div> {{$errors->first('name')}} </div>
 
                 </div>
@@ -28,7 +29,7 @@
                 <div class="form-group pb-2" >
                     <label for="name"> Email </label>
 
-                    <input type="text" name="email" value="{{old('email')}}" class="form-control" >
+                    <input type="text" name="email" value="{{old('email') ?? $customer->email}}" class="form-control" >
                     <div> {{$errors->first('email')}} </div>
 
                 </div>
@@ -54,16 +55,16 @@
                         @endforeach
 
                     </select>
-                    <div> {{$errors->first('active')}} </div>
 
                 </div>
 
-                <button type="submit" class="btn btn-primary"> Add Customer </button>
+
                 @csrf
+
+
+
+                <button type="submit" class="btn btn-primary"> Save Customer </button>
             </form>
         </div>
     </div>
-
-
 @endsection
-
