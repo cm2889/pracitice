@@ -15,6 +15,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::view('about', 'about')->name('about');
+Route::view('contact', 'contact')->name('contact');
+Route::get('contact','ContactFromController@create');
+
+Route::post('contact','ContactFromController@store');
+
+
+
+
+
+
 /*Route::get('customer','CustomersController@index');
 Route::get('customer/create','CustomersController@create');
 Route::post('customer','CustomersController@store');
