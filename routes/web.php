@@ -34,7 +34,7 @@ Route::patch('customer/{customer}','CustomersController@update');
 Route::delete('customer/{customer}','CustomersController@destroy');*/
 
 
-Route::resource('customer','CustomersController');
+Route::resource('customer','CustomersController')->middleware('auth');
 
 
 Auth::routes();
