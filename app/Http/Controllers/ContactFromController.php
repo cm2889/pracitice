@@ -29,6 +29,8 @@ $data=request()->validate([
 
         Mail::to('test@test.com')->send(new ContactFormatMail($data));
 
-        return redirect('contact');
+        
+
+        return redirect('contact')->with('message','Thanks For your message. We will be in touch.');
     }
 }
